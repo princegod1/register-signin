@@ -1,19 +1,28 @@
 import React from 'react';
 
-const SignIn = ({ onRegisterClick }) => {
+const SignIn = ({ onRegisterClick, onSignInClick }) => {
     const navigateToRegister = () => {
       // Call the function passed as a prop to handle the navigation to the Register page
       onRegisterClick();
     };
+    const navigateToSignIn = () => {
+      onSignInClick(); // Use the onSignInClick prop to navigate to the Sign In page
+    };
+  
+    
   return (
     <div style={styles.body}>
       <div style={styles.header}>
-        <div>
-          <button style={styles.button}>Login</button>
-          <button style={styles.button}>Register</button>
+      <div>
+          <button style={styles.button} onClick={onSignInClick}>
+            Login
+          </button>
+          <button style={styles.button} onClick={onRegisterClick}>
+            Register
+          </button>
         </div>
         <div>
-          <img src="images/img1.jpeg" alt="Logo" style={styles.logo} />
+          <img src="img1.jpeg" alt="Logo" style={styles.logo} />
         </div>
         <div>
           <button style={styles.button}>Home</button>
@@ -66,6 +75,9 @@ const styles = {
     width: '100%',
     padding: '10px',
   },
+  logo: {
+    maxWidth: '100px', // Adjust this value to increase or decrease the image size
+  },
   button: {
     borderRadius: '25px',
     padding: '10px',
@@ -74,9 +86,6 @@ const styles = {
     backgroundColor: 'grey',
     color: 'white',
     textDecoration: 'none',
-  },
-  logo: {
-    maxWidth: '50px',
   },
   section: {
     display: 'flex',

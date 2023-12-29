@@ -47,7 +47,7 @@ const Register = ({ onSignInClick, onRegisterClick }) => {
       cursor: 'pointer',
     },
     logo: {
-      maxWidth: '50px',
+      maxWidth: '100px',
     },
     section: {
       display: 'flex',
@@ -135,7 +135,7 @@ const Register = ({ onSignInClick, onRegisterClick }) => {
           </button>
         </div>
         <div>
-          <img src="images/img1.jpeg" alt="Logo" style={styles.logo} />
+          <img src="img1.jpeg" alt="Logo" style={styles.logo} />
         </div>
         <div>
           <button style={styles.button}>Home</button>

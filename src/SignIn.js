@@ -1,6 +1,10 @@
 import React from 'react';
 
-const SignIn = () => {
+const SignIn = ({ onRegisterClick }) => {
+    const navigateToRegister = () => {
+      // Call the function passed as a prop to handle the navigation to the Register page
+      onRegisterClick();
+    };
   return (
     <div style={styles.body}>
       <div style={styles.header}>
@@ -34,9 +38,14 @@ const SignIn = () => {
           <input style={styles.input} type="password" id="password" />
         </div>
 
-        <p style={styles.signInLink}>Don't have an account? <a href="#">Sign up</a></p>
+        <p style={styles.signInLink}>
+          Don't have an account?{' '}
+          <span onClick={navigateToRegister} style={styles.a}>
+            Sign up
+          </span>
+        </p>
 
-        <button style={styles.submitBtn}>Sign in</button>
+        <button style={styles.submitBtn}>Submit</button>
       </div>
     </div>
   );

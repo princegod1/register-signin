@@ -19,6 +19,7 @@ const App = () => {
       {currentPage === 'Register' && <Register onSignInClick={navigateToSignIn} />}
       {currentPage === 'SignIn' && <SignIn onRegisterClick={navigateToRegister} />}
     </div>
+    
   );
 };
 

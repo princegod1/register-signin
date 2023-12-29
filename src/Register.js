@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Register = ({ onSignInClick, onRegisterClick }) => {
+const Register = ({ onSignInClick, onRegisterClick, onServicesClick }) => {
   const [gender, setGender] = useState('Male');
   const [selectedImage, setSelectedImage] = useState(null);
 
@@ -19,6 +19,10 @@ const Register = ({ onSignInClick, onRegisterClick }) => {
 
   const navigateToRegister = () => {
     onRegisterClick(); // Use the onRegisterClick prop to navigate to the Register page
+  };
+
+  const navigateToServices = () => {
+    onServicesClick();
   };
 
   const styles = {
@@ -140,7 +144,9 @@ const Register = ({ onSignInClick, onRegisterClick }) => {
         <div>
           <button style={styles.button}>Home</button>
           <button style={styles.button}>Hotels</button>
-          <button style={styles.button}>RV</button>
+          <button style={styles.button} onClick={navigateToServices}>
+            Services
+          </button>
           <button style={styles.button}>Contact Us</button>
         </div>
       </div>

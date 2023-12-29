@@ -44,26 +44,7 @@ const SignIn = ({ onRegisterClick, onSignInClick }) => {
         <h2 style={styles.h2}>Sign in</h2>
         <p style={styles.p}>Use this form to sign into your account</p>
 
-        <div style={styles.profilePic}>
-          {selectedImage ? (
-            <img
-              src={URL.createObjectURL(selectedImage)}
-              alt="Profile"
-              style={{ width: '100%', height: '100%', borderRadius: '50%' }}
-            />
-          ) : (
-            <span>Select an image</span>
-          )}
-        </div>
-
-        <input
-          type="file"
-          accept="image/*"
-          onChange={handleImageChange}
-          style={{ margin: '10px 0' }}
-        />
-
-
+      
         <div style={styles.profilePic}></div>
         <div style={styles.formGroup}>
           <label style={styles.label} htmlFor="username">Username:</label>
